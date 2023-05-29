@@ -18,48 +18,58 @@ a {
 }
 
 #myMenu {
-    /*display: none;*/
+    display: none;
     box-sizing: border-box;
-
     position: absolute;
+    z-index: 9;
 
-    right: -34px;
-    top: 0px;
+    right: -1.77vw;
+    top: 17px;
+
+    
 
     background: #FFCF9D;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 40px;
-    padding: 0 0 17px 0;
+    border-radius: max(20px, 2vw);
+    padding: 73px 1.76vw 1.76vw 1.76vw;
+
   }
 
 .eye-menu {
+    padding: auto;
     display: block;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    width: 5.2vw;
+    display: none;
 }
 
 .menu-element {
     box-sizing: border-box;
     background: #FFA07A;
-    border-radius: 30px;
-    padding: 20px;
-    margin:  17px 34px;
+    border-radius: 1.6vw;
+    margin-bottom: max(12px, 0.88vw);
+    padding: max(12px, 0.88vw);
     display: flex;
     direction: row;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    width: 321px;
+    width: 16.7vw;
 }
+
+.menu-element:last-child{
+    margin-bottom: 0;
+  }
+  
 
 .menu-element img{
     display: flex;
     align-items: center;
-    width: 100px;
-    height: 100px;
+    width: 5.2vw;
+    height: 5.2vw;
 }
 
 .menu-element p{
@@ -67,7 +77,7 @@ a {
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 400;
-    font-size: 26px;
+    font-size: 1.36vw;
     color: #000000;
 }
 
@@ -209,6 +219,24 @@ body {
 
 /*Laptop*/
 @media screen and (min-width: 769px) and (max-width: 1023px){
+    #myMenu {
+        top: 17px;
+        padding: 60px 1.76vw 1.76vw 1.76vw;
+      }
+    
+    .menu-element img{
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .menu-element {
+        width: 23vw;
+    }
+
+    .menu-element p{
+        font-size: 1.7vw;
+    }
+
     .author{
         margin: 0;
     }
@@ -338,6 +366,24 @@ body {
 
 /*Tablet*/
 @media screen and (min-width: 481px)  and (max-width: 768px){
+    #myMenu {
+        top: 17px;
+        padding: 55px 1.76vw 1.76vw 1.76vw;
+      }
+        
+    .menu-element img{
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .menu-element {
+        width: 30vw;
+    }
+
+    .menu-element p{
+        font-size: 2vw;
+    }
+
     .box{
         margin: 0 auto;
         width: 87.5vw;
@@ -462,6 +508,29 @@ body {
 
 /*Modile*/
 @media screen and (max-width: 480px) {
+
+    #myMenu {
+        top: 28px;
+        padding: 45px max(12px, 1.76vw) max(12px, 1.76vw) max(12px, 1.76vw);
+        
+        right: 6.6vw;
+      }
+    
+        
+    .menu-element img{
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .menu-element {
+        width: 38vw;
+        
+    }
+
+    .menu-element p{
+        font-size: 3vw;
+    }
+
     .box{
         margin: 0 auto;
         width: 87.5vw;

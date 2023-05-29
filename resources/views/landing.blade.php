@@ -27,19 +27,19 @@
         </button>
         <div id="myMenu">
             <img src="/storage/images/icons/eye.svg" alt="" class="eye-menu">
-            <a class="menu-element">
+            <a href="{{ url('/about-deck') }}" class="menu-element">
                 <img src="/storage/images/icons/menu1.svg" alt="">
                 <p>Про колоду Райдера-Уейта</p>
             </a>
-            <a class="menu-element">
+            <a href="{{ url('/all-cards/all') }}" class="menu-element">
                 <img src="/storage/images/icons/menu2.svg" alt="">
                 <p>Значення кожної карти</p>
             </a>
-            <a class="menu-element">
+            <a href="{{ url('/diviation') }}" class="menu-element">
                 <img src="/storage/images/icons/menu3.svg" alt="">
                 <p>Зробити розклад онлайн</p>
             </a>
-            <a class="menu-element">
+            <a href="{{ url('/interpretation') }}" class="menu-element">
                 <img src="/storage/images/icons/menu4.svg" alt="">
                 <p>Значення власного розкладу</p>
             </a>
