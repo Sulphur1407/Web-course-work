@@ -1,0 +1,521 @@
+:root {
+    --background-color: #FFDAB9;
+    --box-color: #FFC87D;
+    --light-red: #FFA07A;
+    --menu-color: #FFCF9D;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    
+}
+
+body {
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+    background-color: var(--background-color);
+}
+
+/*Desktops*/
+@media screen and (min-width: 1024px) {
+    .main-content {
+        margin: 18px 0 auto;
+    }
+
+    .box{
+        margin: 0 auto;
+        width: 87.5vw;
+        background: var(--box-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 90px;
+        padding: 6.25vw;
+        text-align: center;
+    }
+    /*Heading*/
+    header {
+        max-width: 84vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        top: 11px;
+    }
+    
+    .logo-up-part{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        position: relative;
+        top: 11px;
+    }
+    
+    .logo-big-text{
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 68px;
+        line-height: 76px;
+        color: #000000;
+    }
+    
+    .logo-small-text{
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .logo-img{
+        position: relative;
+        bottom: 16px;
+        width: 80px;
+        height: 80px;
+        background: #FFDAB9;
+        z-index: -1;
+    }
+ 
+    /*Footer*/
+    .contact-heading{
+        margin: 0;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(14px + 0.73vw);
+        line-height: 31px;   
+    }
+
+    .powered-by-heading{
+        margin: 0;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(14px + 0.73vw);
+        line-height: 31px;
+        text-align: right;   
+    }
+    
+    .contacts{
+        margin: 0;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(10px + 0.62vw);
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .footer-contacts{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .powered-by{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footer{
+        margin: 60px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .footer img{
+        width: calc(204px + 10.6vw);
+    }
+    
+    .wrapper{
+        margin: 0 auto;
+        max-width: 75vw;
+    }
+}
+
+
+/*Laptop*/
+@media screen and (min-width: 769px) and (max-width: 1023px){
+    .author{
+        margin: 0;
+    }
+
+    .box{
+        margin: 0 auto;
+        width: 87.5vw;
+        background: var(--box-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 90px;
+        padding: 6.25vw;
+        text-align: center;
+    }
+
+    /*Heading*/
+    header {
+        max-width: 84vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        top: 11px;
+    }
+
+    .logo-up-part{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        position: relative;
+        top: 11px;
+    }
+    
+    .logo-big-text{
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40.8px;
+        line-height: 76px;
+        color: #000000;
+    }
+    
+    .logo-small-text{
+        position: relative;
+        bottom: 14px;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11.4px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .logo-img{
+        position: relative;
+        bottom: 8px;
+        width: 48px;
+        height: 48px;
+        background: #FFDAB9;
+        z-index: -1;
+    }
+
+    .menu-img{
+        width: 28px;
+        height: 28px;
+    }
+
+    /*Footer*/
+    .contact-heading{
+        margin: 0;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(12px + 0.73vw);
+        line-height: 31px;   
+    }
+
+    .powered-by-heading{
+        margin: 0;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(12px + 0.73vw);
+        line-height: 31px;
+        text-align: right;   
+    }
+    
+    .contacts{
+        margin: 0;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(8px + 0.62vw);
+        display: flex;
+        align-items: center;
+    }
+    
+    .footer-contacts{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .powered-by{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footer{
+        margin: 40px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .footer img{
+        width: calc(204px + 10.6vw);
+    }
+    
+    .wrapper{
+        margin: 0 auto;
+        max-width: 75vw;
+    }
+}
+
+
+/*Tablet*/
+@media screen and (min-width: 481px)  and (max-width: 768px){
+    .box{
+        margin: 0 auto;
+        width: 87.5vw;
+        background: var(--box-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 45px;
+        padding: 6.25vw;
+        text-align: center;
+    }
+
+    /*Heading*/
+    header {
+        max-width: 84vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        top: 11px;
+    }
+
+    .logo-up-part{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        position: relative;
+        top: 11px;
+    }
+    
+    .logo-big-text{
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40.8px;
+        line-height: 76px;
+        color: #000000;
+    }
+    
+    .logo-small-text{
+        position: relative;
+        bottom: 14px;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11.4px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .logo-img{
+        position: relative;
+        bottom: 8px;
+        width: 48px;
+        height: 48px;
+        background: #FFDAB9;
+        z-index: -1;
+    }
+
+    .menu-img{
+        width: 28px;
+        height: 28px;
+    }
+
+    /*Footer*/
+    .contact-heading{
+        margin: 0;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(9px + 0.73vw);
+
+    }
+
+    .powered-by-heading{
+        margin: 0;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(9px + 0.73vw);
+        text-align: right;   
+    }
+    
+    .contacts{
+        margin: 0;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(8px + 0.62vw);
+        display: flex;
+        align-items: center;
+    }
+    
+    .footer-contacts{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .powered-by{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footer{
+        margin: 20px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .footer img{
+        width: calc(104px + 10.6vw);
+    }
+    
+    .wrapper{
+        margin: 0 auto;
+        max-width: 75vw;
+    }
+}
+
+
+/*Modile*/
+@media screen and (max-width: 480px) {
+    .box{
+        margin: 0 auto;
+        width: 87.5vw;
+        background: var(--box-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 45px;
+        padding: 6.25vw;
+        text-align: center;
+    }
+
+    /*Heading*/
+    header {
+        max-width: 84vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-up-part{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        position: relative;
+        top: 11px;
+    }
+    
+    .logo-big-text{
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28.8px;
+        line-height: 76px;
+        color: #000000;
+    }
+    
+    .logo-small-text{
+        position: relative;
+        bottom: 24px;
+        right: -8px;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 8.4px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .logo-img{
+        position: relative;
+        bottom: 8px;
+        width: 48px;
+        height: 48px;
+        background: #FFDAB9;
+        z-index: -1;
+    }
+
+    .menu-img{
+        width: 28px;
+        height: 28px;
+    }
+    
+    /*Footer*/
+    .contact-heading{
+        margin: 0;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(4px + 0.73vw);
+
+    }
+
+    .powered-by-heading{
+        margin: 0;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(9px + 0.73vw);
+        text-align: right;   
+    }
+    
+    .contacts{
+        margin: 0;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(4px + 0.62vw);
+        display: flex;
+        align-items: center;
+    }
+    
+    .footer-contacts{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .powered-by{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footer{
+        margin: 20px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .footer img{
+        width: calc(104px + 10.6vw);
+    }
+    
+    .wrapper{
+        margin: 0 auto;
+        max-width: 75vw;
+    }
+}

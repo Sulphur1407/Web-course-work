@@ -1,0 +1,176 @@
+/*Desktops*/
+@media screen {
+    .main-content h1 {
+        margin: 0 auto;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: max(3.54vw, 17px);
+        text-align: center;
+    }
+
+    .big-button {
+        width: 100%;
+        margin: 3.1vw 0 0 0;
+        padding: 2vw;
+        background: url(/storage/images/button.png);
+        box-sizing: border-box;
+        border-radius: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 5.2vw;  
+        color: #FFFFFF;
+        text-shadow:
+            -4px 0px 0px black,
+            4px 0px 0px black,
+            0px -4px 0px black,
+            0px 4px 0px black;
+    }
+
+    .main-content p {
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: max(1.8vw, 10px);
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .answer {
+        margin: 3.1vw 0 0 0;
+        padding: 3.1vw;
+        background: #FFA07A;
+        border-radius: 6.2vw;
+    }
+
+    .question-input {
+        width: 100%;
+        margin: 3.1vw 0;
+        padding: max(1.8vw, 10px);;
+        
+        background: #FFA07A;
+        border-radius: 6.2vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: max(1.8vw, 10px);
+        text-align: center;
+        outline: none;
+      }
+
+    .cards {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cards img {
+        width: 10vw;
+        border-radius: 10px;
+    }
+
+    .revers {
+        transform: rotate(180deg);
+    }
+}
+
+
+/*Laptop*/
+@media screen and (max-width: 1023px){
+    .big-button {
+        padding: 3vw;
+        background-size: 398px 265px;
+        background-position: 50% 50%;
+        font-size: 5.2vw;  
+        text-shadow:
+            -2px 0px 0px black,
+            2px 0px 0px black,
+            0px -2px 0px black,
+            0px 2px 0px black;
+    }
+
+    .main-content p {
+        font-size: max(2.8vw, 15px);
+    }
+
+    .question p {
+        font-size: max(2.8vw, 12px);
+    }
+
+    .cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .cards img:last-child,
+    .cards img:nth-last-child(2),
+    .cards img:nth-last-child(3) {
+      margin: auto;
+      margin-top: 2vw;
+    } 
+
+    .cards img {
+        width: 17.5vw;
+    }
+}
+
+
+/*Tablet*/
+@media screen and (max-width: 768px){
+    .big-button {
+        padding: 3vw;
+        background-size: 398px 265px;
+        background-position: 50% 50%;
+        font-size: 5.2vw;  
+        text-shadow:
+            -2px 0px 0px black,
+            2px 0px 0px black,
+            0px -2px 0px black,
+            0px 2px 0px black;
+    }
+}
+
+/*Modile*/
+@media screen and (max-width: 480px) {
+    .big-button {
+        text-shadow:
+            -1px 0px 0px black,
+            1px 0px 0px black,
+            0px -1px 0px black,
+            0px 1px 0px black;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .cards img {
+        width: 23.5vw;
+    }
+
+    .cards img:last-child{
+        margin: auto;
+        margin-top: 2vw;
+    }
+
+    .cards img:nth-last-child(2),
+    .cards img:nth-last-child(3),
+    .cards img:nth-last-child(4) {
+        margin: inherit;
+        margin-top: 2vw;
+    }
+}

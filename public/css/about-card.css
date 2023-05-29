@@ -1,0 +1,87 @@
+/*Desktops*/
+@media screen {
+    .main-content h1 {
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(13px + 2.3vw);
+    }
+
+    .main-content h2 {
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: max(2.3vw, 15px);
+    }
+
+    .main-content p {
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: max(1.8vw, 10px);
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main-content b {
+        font-size: max(1.8vw, 6px);
+    }
+
+    .block-1 img {
+        width: 18vw;
+        max-width: 347px;
+    }
+
+    .block-3 p {
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: max(calc(9px + 0.5vw), 10px);
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .block-3 div {
+        padding: 3.1vw;
+        background: #FFA07A;
+        border-radius: 6.2vw;
+    }
+
+    .box1 {
+        margin: 6.2vw 0 0 0;
+    }
+
+    .box2 {
+        margin: 3.1vw 0 0 0;
+    }
+
+    .text {
+        width: 45%;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .block-1 {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/*Laptop*/
+@media screen and (max-width: 1023px){
+    .main-content h1 {
+        font-size: 3.4vw;
+    }
+
+}
+
+/*Modile*/
+@media screen and (max-width: 480px) {
+    .block-1 p{
+        font-size: max(1.8vw, 6px);
+    }
+}

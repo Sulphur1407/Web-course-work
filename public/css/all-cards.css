@@ -1,0 +1,91 @@
+/*Desktops*/
+@media screen {
+    .main-content h1 {
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(13px + 2.3vw);
+    }
+
+    .main-content p {
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: max(1.8vw, 10px);
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cards img {
+        width: 9.2vw;
+    }
+
+    .cards a {
+      width: 9.2vw;
+    }
+
+    .cards a img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards > * {
+        flex-basis: calc(20.4% - max(1.8vw, 10px));
+        margin-right: max(1.8vw, 10px);
+        margin-top: max(1.8vw, 10px);
+      }
+    
+    .cards > *:nth-child(5n) {
+      margin-right: 0;
+    }
+
+    .cards > *:last-child {
+      margin-right: 0;
+    }
+}
+
+
+/*Laptop*/
+@media screen and (max-width: 1023px){
+    
+}
+
+
+/*Tablet*/
+@media screen and (max-width: 768px){
+    .cards > * {
+        flex-basis: calc(25.5% - max(1.8vw, 10px));
+    }
+
+    .cards > *:nth-child(5n) {
+      margin-right: max(1.8vw, 10px);
+    }
+    
+    .cards > *:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    
+}
+
+/*Modile*/
+@media screen and (max-width: 480px) {
+    .cards > * {
+        flex-basis: calc(34% - max(1.8vw, 10px));
+    }
+
+    .cards > *:nth-child(4n) {
+        margin-right: max(1.8vw, 10px);
+      }
+
+    .cards > *:nth-child(3n) {
+      margin-right: 0;
+    }
+}

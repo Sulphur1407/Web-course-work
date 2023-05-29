@@ -1,0 +1,210 @@
+/*Desktops*/
+@media screen {
+    .main-content h1 {
+        margin: 0 auto;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: max(3.54vw, 17px);
+        text-align: center;
+    }
+
+    .big-button {
+        margin: 3.1vw 0 0 0;
+        padding: 2vw;
+        background: url(/storage/images/button.png);
+        box-sizing: border-box;
+        border-radius: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-content p {
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: max(1.8vw, 10px);
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .big-button p {
+        margin: 0;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 5.2vw;  
+        color: #FFFFFF;
+        text-shadow:
+            -4px 0px 0px black,
+            4px 0px 0px black,
+            0px -4px 0px black,
+            0px 4px 0px black;
+    }
+
+    .answer {
+        margin: 3.1vw 0 0 0;
+        padding: 3.1vw;
+        background: #FFA07A;
+        border-radius: 6.2vw;
+    }
+
+    .question {
+        margin: 3.1vw 0;
+        padding: 0.5vw;
+        background: #FFA07A;
+        border-radius: 6.2vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .revers {
+        transform: rotate(180deg);
+    }
+
+    .card-choose {
+        margin: 3.1vw 0 0 0;
+        padding: 3.1vw 6.2vw;
+        background: #FFCF9D;
+        border-radius: max(2vw, 20px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .card-choose img {
+        width: 12vw;
+    }
+
+    .list img {
+        width: max(1.8vw, 10px);
+    }
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .big-box-choose{
+        width: 3.1vw;
+        height: 3.1vw;
+        background: #FFA07A;
+        border-radius: max(0.16vw, 1.5px);
+        display: flex;
+        justify-content: center;
+    }
+
+    .small-box-choose{
+        margin: auto;
+        width: 2.4vw;
+        height: 2.4vw;
+        background: #FFC87D;
+        border-radius: max(0.3vw, 3px);
+    }
+
+    .cheak-box {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cheak-box p {
+        margin: 0 0 0 max(1vw, 8px);
+        font-size: 1.3vw;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .list p {
+        margin: 0;
+        font-size: 1.8vw;
+    }
+
+    .list {
+        width: 45vw;
+        padding: 1vw 2vw;
+        background: #FFA07A;
+        border-radius: 6.2vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .cheak-boxes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .invisible-text {
+        color: transparent;
+    }
+}
+
+
+/*Laptop*/
+@media screen and (max-width: 1023px){
+    .big-button {
+        padding: 3vw;
+        background-size: 398px 265px;
+        background-position: 50% 50%;
+    }
+
+    .main-content p {
+        font-size: max(2.8vw, 15px);
+    }
+
+    .options p {
+        font-size: max(1.8vw, 5px);
+    }
+
+    .question p {
+        font-size: max(2.8vw, 12px);
+    }
+
+    .big-button p {
+        font-size: 5.2vw;  
+        text-shadow:
+            -2px 0px 0px black,
+            2px 0px 0px black,
+            0px -2px 0px black,
+            0px 2px 0px black;
+    }
+
+}
+
+
+/*Tablet*/
+@media screen and (max-width: 768px){
+    .big-button {
+        padding: 3vw;
+        background-size: 398px 265px;
+        background-position: 50% 50%;
+    }
+
+    .big-button p {
+        font-size: 5.2vw;  
+        text-shadow:
+            -2px 0px 0px black,
+            2px 0px 0px black,
+            0px -2px 0px black,
+            0px 2px 0px black;
+    }
+   
+}
+
+/*Modile*/
+@media screen and (max-width: 480px) {
+    .big-button p {
+        font-size: 5.2vw;  
+        text-shadow:
+            -1px 0px 0px black,
+            1px 0px 0px black,
+            0px -1px 0px black,
+            0px 1px 0px black;
+    }
+}

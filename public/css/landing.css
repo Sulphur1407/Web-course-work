@@ -1,0 +1,229 @@
+/*Desktops*/
+@media screen {
+    .main-content h1 {
+        margin: 0 auto;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3.54vw;
+        text-align: center;
+    }
+    
+    .main-content h2 {
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.87vw;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main-content p {
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(14px + 0.8vw);
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .small-button p {
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.92vw;
+    }
+
+    .big-button p {
+        margin: 0;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 5.2vw;  
+        color: #FFFFFF;
+        text-shadow:
+            -4px 0px 0px black,
+            4px 0px 0px black,
+            0px -4px 0px black,
+            0px 4px 0px black;
+    }
+
+    .big-button {
+        padding: 2vw;
+        background: url(/storage/images/button.png);
+        box-sizing: border-box;
+        border-radius: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .landing-main-text {
+        width: 25vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .small-button-box {
+        padding: 3px;
+        box-sizing: border-box;
+        background: #FFA07A;
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .block-1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .block-1 img{
+        width: 45.3vw;
+    }
+
+    .img1-landing {
+        display: flex;
+        align-items: center;
+    }
+
+    .block-2{
+        margin: 6.25vw auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bl2-images {
+        margin: 3.12vw 0 0 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .bl2-images div{
+        width: 22.4vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+/*Laptop*/
+@media screen and (max-width: 1023px){
+    .landing-main-text p{
+        font-size: calc(10px + 0.7vw);
+    }
+
+    .small-button p {
+        font-size: 1.92vw;
+    }
+
+    .big-button p {
+        font-size: 5.2vw;  
+        text-shadow:
+            -2px 0px 0px black,
+            2px 0px 0px black,
+            0px -2px 0px black,
+            0px 2px 0px black;
+    }
+
+    .big-button {
+        padding: 3vw;
+        background-size: 398px 265px;
+        background-position: 50% 50%;
+    }
+
+    .small-button-box {
+        padding: 4px 20px;
+        border-radius: 30px;
+    }
+
+}
+
+
+/*Tablet*/
+@media screen and (max-width: 768px){
+    .landing-main-text p{
+        font-size: calc(7px + 0.7vw);
+    }
+
+    .small-button p {
+        font-size: calc(2px + 1.92vw);
+    }
+
+    .main-content h2{
+        font-size: 2.37vw;
+    }
+
+    .big-button {
+        padding: 3vw;
+        background-size: 398px 265px;
+        background-position: 50% 50%;
+    }
+
+    .small-button-box {
+        padding: 4px 20px;
+        box-sizing: border-box;
+        background: #FFA07A;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .block-3 p {
+        font-size: calc(10px + 0.8vw);
+    }
+
+    .big-button p {
+        font-size: 5.2vw;  
+        text-shadow:
+            -2px 0px 0px black,
+            2px 0px 0px black,
+            0px -2px 0px black,
+            0px 2px 0px black;
+    }
+
+
+
+    .bl2-images a{
+        margin: 0;
+        width: 45%;
+    }
+
+    
+
+
+    .bl2-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bl2-images a:first-of-type {
+        margin-right: 6.8vw;
+      } 
+}
+
+/*Modile*/
+@media screen and (max-width: 480px) {
+    .landing-main-text p{
+        font-size: calc(5px + 0.7vw);
+    }
+
+    .big-button p {
+        font-size: 5.2vw;  
+        text-shadow:
+            -1px 0px 0px black,
+            1px 0px 0px black,
+            0px -1px 0px black,
+            0px 1px 0px black;
+    }
+}
