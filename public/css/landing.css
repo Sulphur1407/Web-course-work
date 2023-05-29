@@ -193,13 +193,17 @@
 
 
 
+    .bl2-images div{
+        margin: 0;
+        width: 100%;
+    }
+
     .bl2-images a{
         margin: 0;
         width: 45%;
     }
 
     
-
 
     .bl2-images {
         display: flex;
@@ -209,7 +213,8 @@
 
     .bl2-images a:first-of-type {
         margin-right: 6.8vw;
-      } 
+      }
+
 }
 
 /*Modile*/

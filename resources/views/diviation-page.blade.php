@@ -12,18 +12,18 @@
     <link rel="stylesheet" href="css/diviation-page.css">
 </head>
 <body>
-<header>
-    <a href="{{ url('/') }}">
-        <div class="logo">
-            <div class="logo-up-part">
-                <img src="/storage/images/logo.svg" alt="" class="logo-img">
-                <div class="logo-big-text">Tarot hub</div>
+    <header>
+        <a href="{{ url('/') }}">
+            <div class="logo">
+                <div class="logo-up-part">
+                    <img src="/storage/images/logo.svg" alt="" class="logo-img">
+                    <div class="logo-big-text">Tarot hub</div>
+                </div>
+                <div class="logo-small-text">найбільший портал тарології в укрнеті</div>
             </div>
-            <div class="logo-small-text">найбільший портал тарології в укрнеті</div>
-        </div>
-    </a>
-    <img src="/storage/images/icons/menu 1.svg" alt="" class="menu-img">
-</header>
+        </a>
+        <img src="/storage/images/icons/menu 1.svg" alt="" class="menu-img">
+    </header>
 
     <div class="main-content">
         <div class="box">
