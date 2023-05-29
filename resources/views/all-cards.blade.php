@@ -39,25 +39,72 @@
                 <a href="{{ url('/all-cards/high_priestess') }}">
                     <img src="/storage/images/карти таро/Старші аркани/Верховна Жриця.jpg" alt="">
                 </a>
-                <img src="/storage/images/карти таро/Старші аркани/Імператриця.jpg" alt="">
-                <img src="/storage/images/карти таро/Старші аркани/Імператор.jpg" alt="">
-                <img src="/storage/images/карти таро/Старші аркани/Ієрофант.jpg" alt="">
-                <img src="/storage/images/карти таро/Старші аркани/Закоханні.jpg" alt="">
-                <img src="/storage/images/карти таро/Старші аркани/Колісниця.jpg" alt="">
-                <img src="/storage/images/карти таро/Старші аркани/Сила.jpg" alt="">
-                <img src="/storage/images/карти таро/Старші аркани/Відлюдник.jpg" alt="">
-                <img src="/storage/images/карти таро/Старші аркани/Колесо Фортуни.jpg" alt="">
-                <img src="/storage/images/карти таро/Старші аркани/Справедливість.jpg" alt="">
-                <img src="/storage/images/карти таро/Старші аркани/Повішаний.jpg" alt="">
-                <img src="/storage/images/карти таро/Старші аркани/Смерть.jpg" alt="">
-                <img src="/storage/images/карти таро/Старші аркани/Помірність.jpg" alt="">
-                <img src="/storage/images/карти таро/Старші аркани/Диявол.jpg" alt="">
-                <img src="/storage/images/карти таро/Старші аркани/Вежа.jpg" alt="">
-                <img src="/storage/images/карти таро/Старші аркани/Зірка.jpg" alt="">
-                <img src="/storage/images/карти таро/Старші аркани/Місяць.jpg" alt="">
-                <img src="/storage/images/карти таро/Старші аркани/Сонце.jpg" alt="">
-                <img src="/storage/images/карти таро/Старші аркани/Суд.jpg" alt="">
-                <img src="/storage/images/карти таро/Старші аркани/Світ.jpg" alt="">
+                <a href="{{ url('/all-cards/empress') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Імператриця.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/emperor') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Імператор.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/hierophant') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Ієрофант.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/lovers') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Закоханні.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/chariot') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Колісниця.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/strength') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Сила.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/hermit') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Відлюдник.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/wheel_of_fortune') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Колесо Фортуни.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/justise') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Справедливість.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/hangedman') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Повішаний.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/death') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Смерть.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/temperance') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Помірність.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/devil') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Диявол.jpg" alt=""> 
+                </a>
+                <a href="{{ url('/all-cards/tower') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Вежа.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/star') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Зірка.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/moon') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Місяць.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/sun') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Сонце.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/judgement') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Суд.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/world') }}">
+                    <img src="/storage/images/карти таро/Старші аркани/Світ.jpg" alt="">
+                </a>
+                
+                
+                
+                
+                
+                
+                
+                
+                
             </div>
 
             <h1>Молодші Аркани</h1>

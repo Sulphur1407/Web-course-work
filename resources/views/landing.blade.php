@@ -22,7 +22,29 @@
                 <div class="logo-small-text">найбільший портал тарології в укрнеті</div>
             </div>
         </a>
-        <img src="/storage/images/icons/menu 1.svg" alt="" class="menu-img">
+        <button id="myButton">
+            <img src="/storage/images/icons/menu 1.svg" alt="" class="menu-img">
+        </button>
+        <div id="myMenu">
+            <img src="/storage/images/icons/eye.svg" alt="" class="eye-menu">
+            <a class="menu-element">
+                <img src="/storage/images/icons/menu1.svg" alt="">
+                <p>Про колоду Райдера-Уейта</p>
+            </a>
+            <a class="menu-element">
+                <img src="/storage/images/icons/menu2.svg" alt="">
+                <p>Значення кожної карти</p>
+            </a>
+            <a class="menu-element">
+                <img src="/storage/images/icons/menu3.svg" alt="">
+                <p>Зробити розклад онлайн</p>
+            </a>
+            <a class="menu-element">
+                <img src="/storage/images/icons/menu4.svg" alt="">
+                <p>Значення власного розкладу</p>
+            </a>
+
+        </div>
     </header>
 
     <div class="main-content">
@@ -96,6 +118,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="{{ asset('js/menu.js') }}"></script>
 </body>
 </html>
+
