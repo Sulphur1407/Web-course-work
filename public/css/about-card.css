@@ -29,7 +29,7 @@
     }
 
     .block-1 img {
-        width: 18vw;
+        width: max(18vw, 90px);
         max-width: 347px;
     }
 
