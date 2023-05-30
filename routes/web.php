@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AllCardsController;
-use App\Http\Controllers\Test;
+use App\Http\Controllers\TarotDiviationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,12 +29,12 @@ Route::get("/interpretation", function () {
     return view("interpretation-page");
 });
 
-Route::get("/diviation", function () {
-    return view("diviation-page");
-});
+Route::get("/diviation", [TarotDiviationController::class, "show"]);
 
-Route::get('/test/doctor/{id}', [Test::class, "show_doctor"]);
-Route::get('/test/patient/{id}', [Test::class, "show_patient"]);
+Route::post('/get-answer', [TarotDiviationController::class, "getAnswer"]);
+
+
+
 
 
 

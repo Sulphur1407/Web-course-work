@@ -54,13 +54,15 @@
                 <input type="text" id="question" class="question-input" placeholder="Введіть своє питання">
 
                 <div class="cards">
-                    <img src="/storage/images/back of card.png" alt="">
-                    <img src="/storage/images/карти таро/Старші аркани/Відлюдник.jpg" alt="">
-                    <img src="/storage/images/back of card.png" alt="">
-                    <img src="/storage/images/back of card.png" alt="">
-                    <img src="/storage/images/карти таро/Молодші аркани/Мечі/4 мечів.jpg" alt="">
-                    <img src="/storage/images/карти таро/Молодші аркани/Кубки/Лицар Кубків.jpg" alt="" class="revers">
-                    <img src="/storage/images/back of card.png" alt="">
+                    @foreach ($selectedCards as $card)
+                        @if ($card["reversed"])
+                            <img src="{{ asset('/storage/images/карти таро/' . $card['image']) }}" alt="" class="revers" сlass="card">
+                        @else
+                            <img src="{{ asset('/storage/images/карти таро/' . $card['image']) }}" alt="" сlass="card">
+                        @endif
+                        
+                    @endforeach
+                    
                 </div>
 
                 <button type="submit" class="big-button">Отримати відповідь</button>
@@ -93,6 +95,6 @@
         </div>
     </footer>
     <script src="{{ asset('js/menu.js') }}"></script>
-
+    <script src="{{ asset('js/diviation.js') }}"></script>
 </body>
 </html>
