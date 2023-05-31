@@ -126,7 +126,7 @@ class TarotDiviationController extends Controller
                 $request = $request . " перевернута";
             }
         }
-        /// Закоментовано, щоб для тестування не тратити гроші
+        /* Закоментовано, щоб для тестування не тратити гроші
         $open_ai_key = env("TOKEN");;
         $open_ai = new OpenAi($open_ai_key);
         
@@ -148,7 +148,7 @@ class TarotDiviationController extends Controller
         $d = json_decode($chat);
         $generatedText = ($d->choices[0]->message->content);
         
-        //$generatedText = $request;
+        */$generatedText = $request;
 
 
         return response()->json(['text' => $generatedText]);

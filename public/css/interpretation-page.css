@@ -1,5 +1,44 @@
 /*Desktops*/
 @media screen {
+
+    .error-message {
+        background-color: #FFCF9D;
+        border-radius: 10px;
+        padding: 10px;
+        color: #000;
+        position: absolute;
+        left: calc(50% - 30vw);
+        width: 60vw;
+        text-align: center;
+        top: 20vw;
+        font-size: min(3vw, 40px);
+      }
+
+      .list {
+        position: relative;
+      }
+      
+      .dropdown-menu {
+        z-index: 10;
+        padding: 1vw 0;
+        border-radius: max(20px, 4vw);
+        list-style-type: none;
+        background: #FFA07A;
+        font-size: max(1.8vw, 8px);
+      }
+
+
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      
+      
+      .hidden {
+        display: none;
+      }
+      
+      
     .main-content h1 {
         margin: 0 auto;
         font-family: 'Comfortaa';
@@ -9,7 +48,32 @@
         text-align: center;
     }
 
+    .card {
+        border-radius: 10px;
+    }
+
+    .question-input {
+        width: 100%;
+        margin: 3.1vw 0;
+        padding: max(1.8vw, 10px);;
+        
+        background: #FFA07A;
+        border-radius: 6.2vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: max(1.8vw, 10px);
+        text-align: center;
+        outline: none;
+      }
+
     .big-button {
+        width: 100%;
         margin: 3.1vw 0 0 0;
         padding: 2vw;
         background: url(/storage/images/button.png);
@@ -18,6 +82,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        border: none;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 5.2vw;  
+        color: #FFFFFF;
+        text-shadow:
+            -4px 0px 0px black,
+            4px 0px 0px black,
+            0px -4px 0px black,
+            0px 4px 0px black;
     }
 
     .main-content p {
@@ -43,6 +118,11 @@
             0px -4px 0px black,
             0px 4px 0px black;
     }
+
+    .list p {
+        font-size: max(1.8vw, 10px);
+    }
+    
 
     .answer {
         margin: 3.1vw 0 0 0;
@@ -77,10 +157,12 @@
 
     .card-choose img {
         width: 12vw;
+        height: 20.2vw;
     }
 
     .list img {
         width: max(1.8vw, 10px);
+        height: max(1.8vw, 10px);
     }
 
     .options {
@@ -104,6 +186,7 @@
         height: 2.4vw;
         background: #FFC87D;
         border-radius: max(0.3vw, 3px);
+        visibility : hidden;
     }
 
     .cheak-box {
@@ -111,9 +194,19 @@
         flex-direction: row;
     }
 
+    
+
     .cheak-box p {
         margin: 0 0 0 max(1vw, 8px);
-        font-size: 1.3vw;
+        font-size: 1.6vw;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cheak-box label {
+        margin: 0 0 0 max(1vw, 8px);
+        font-size: 1.6vw;
         display: flex;
         align-items: center;
         text-align: center;
@@ -127,6 +220,7 @@
     .list {
         width: 45vw;
         padding: 1vw 2vw;
+        margin: max(1.8vw, 10px) 0;
         background: #FFA07A;
         border-radius: 6.2vw;
         display: flex;
@@ -152,6 +246,12 @@
         padding: 3vw;
         background-size: 398px 265px;
         background-position: 50% 50%;
+        font-size: 5.2vw;  
+        text-shadow:
+            -2px 0px 0px black,
+            2px 0px 0px black,
+            0px -2px 0px black,
+            0px 2px 0px black;
     }
 
     .main-content p {
@@ -175,15 +275,33 @@
             0px 2px 0px black;
     }
 
+    .cheak-box p {
+        font-size: max(12px, 2vw);
+    }
+
 }
 
 
 /*Tablet*/
 @media screen and (max-width: 768px){
+    .cheak-box p {
+        font-size: max(9px, 1.8vw);
+    }
+
+    .list {
+        font-size: max(1.8vw, 9px);
+    }
+
     .big-button {
         padding: 3vw;
         background-size: 398px 265px;
         background-position: 50% 50%;
+        font-size: 5.2vw;  
+        text-shadow:
+            -2px 0px 0px black,
+            2px 0px 0px black,
+            0px -2px 0px black,
+            0px 2px 0px black;
     }
 
     .big-button p {
@@ -207,4 +325,13 @@
             0px -1px 0px black,
             0px 1px 0px black;
     }
+
+    .cheak-box p {
+        font-size: max(7px, 1.3vw);
+    }
+
+    .list {
+        font-size: max(7px, 1.3vw);
+    }
+
 }

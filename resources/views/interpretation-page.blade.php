@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/footer and heading.css">
     <link rel="stylesheet" href="css/interpretation-page.css">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
 <header>
@@ -50,51 +51,55 @@
     <div class="main-content">
         <div class="box">
             <h1>Гадання трьома картами:</h1>
-            <div class="question">
-                <p>Чи я знайду в цьому році роботу?</p>
-            </div>
+            <input type="text" id="question" class="question-input" placeholder="Введіть своє питання">
 
             <div class="card-choose">
-                <img src="/storage/images/карти таро/Старші аркани/Відлюдник.jpg" alt="">
+                <img id="img1" src="/storage/images/back of card.png" onerror="this.src='/storage/images/back of card.png'" class="card">
                 <div class="options">
                     <div class="cheak-boxes">
                         <div class="cheak-box">
-                            <div class="big-box-choose"><div class="small-box-choose"></div></div>
+                            <div id="myButton1" class="big-box-choose"><div class="small-box-choose" id="myButtonOn1"></div></div>
                             <p>Старша аркана</p>
                         </div>
                         <div class="cheak-box">
-                            <div class="big-box-choose"></div>
+                            <div id="myButton2" class="big-box-choose"><div class="small-box-choose" id="myButtonOn2"></div></div>
                             <p>Молодша аркана</p>
                         </div>
                     </div>
 
-                   <div class="list">
-                        <p>Відлюдник IX (The Hermit)</p>
+                    <div class="list" id="listItem1">
+                      <p>Зробіть вибір</p>
+                      <img src="/storage/images/icons/arrow.svg" alt="">
+                    </div>
+                    <div class="dropdown-menu hidden" id="dropdownMenu1"></div>
+
+                    <div class="list" id="listItem1Add">
+                        <p class="invisible-text">1</p>
                         <img src="/storage/images/icons/arrow.svg" alt="">
                     </div>
-                    <div class="list"><p class="invisible-text">1</p></div>
+                    <div class="dropdown-menu hidden" id="dropdownMenu2"></div>
                     <div class="cheak-box">
-                        <div class="big-box-choose"></div>
+                        <div id="CheakBox1" class="big-box-choose"><div class="small-box-choose" id="CheakBoxOn1"></div></div>
                         <p>Перевернута</p>
                     </div>
                 </div>
             </div>
 
             <div class="card-choose">
-                <img src="/storage/images/карти таро/Молодші аркани/Мечі/4 мечів.jpg" alt="">
+                <img id="img2" src="/storage/images/карти таро/Молодші аркани/Мечі/4 мечів.jpg" alt="">
                 <div class="options">
                     <div class="cheak-boxes">
                         <div class="cheak-box">
-                            <div class="big-box-choose"></div>
+                            <div id="myButton3" class="big-box-choose"><div class="small-box-choose" id="myButtonOn3"></div></div>
                             <p>Старша аркана</p>
                         </div>
                         <div class="cheak-box">
-                            <div class="big-box-choose"><div class="small-box-choose"></div></div>
+                            <div id="myButton4" class="big-box-choose"><div class="small-box-choose" id="myButtonOn4"></div></div>
                             <p>Молодша аркана</p>
                         </div>
                     </div>
 
-                   <div class="list">
+                    <div class="list" id="toggleButton">
                         <p>Мечі</p>
                         <img src="/storage/images/icons/arrow.svg" alt="">
                     </div>
@@ -103,22 +108,22 @@
                         <img src="/storage/images/icons/arrow.svg" alt="">
                     </div>
                     <div class="cheak-box">
-                        <div class="big-box-choose"></div>
+                        <div id="CheakBox2" class="big-box-choose"><div class="small-box-choose" id="CheakBoxOn2"></div></div>
                         <p>Перевернута</p>
                     </div>
                 </div>
             </div>
 
             <div class="card-choose">
-                <img src="/storage/images/карти таро/Молодші аркани/Кубки/Лицар Кубків.jpg" alt="" class="revers">
+                <img id="img3" src="/storage/images/карти таро/Молодші аркани/Кубки/Лицар Кубків.jpg" alt="" class="revers">
                 <div class="options">
                     <div class="cheak-boxes">
                         <div class="cheak-box">
-                            <div class="big-box-choose"></div>
+                            <div id="myButton5" class="big-box-choose"><div class="small-box-choose" id="myButtonOn5"></div></div>
                             <p>Старша аркана</p>
                         </div>
                         <div class="cheak-box">
-                            <div class="big-box-choose"><div class="small-box-choose"></div></div>
+                            <div id="myButton6" class="big-box-choose"><div class="small-box-choose" id="myButtonOn6"></div></div>
                             <p>Молодша аркана</p>
                         </div>
                     </div>
@@ -132,21 +137,15 @@
                         <img src="/storage/images/icons/arrow.svg" alt="">
                     </div>
                     <div class="cheak-box">
-                        <div class="big-box-choose"><div class="small-box-choose"></div></div>
+                        <div id="CheakBox3" class="big-box-choose"><div class="small-box-choose" id="CheakBoxOn3"></div></div>
                         <p>Перевернута</p>
                     </div>
                 </div>
             </div>
 
-            <div class="big-button">
-                <p>Отримати відповідь</p>
-            </div>
+            <button type="submit" class="big-button" onclick="getAnswer()">Отримати відповідь</button>
 
-            <div class="answer">
-                <p>За результатами гадання на картах Таро, шанси на знаходження роботи у цьому році можуть бути дещо обмеженими. Карта "Відлюдник" (The Hermit) та "Чотири Мечі" (4 Swords) можуть вказувати на період самотності, віддаленості або нерішучості. "Лицар кубків" (Knight of Cups) у зворотньому положенні може означати втрату мотивації, незацікавленість або невпевненість у прийнятті рішень.
-                    Проте, не варто засмучуватися, оскільки ці карти можуть також вказувати на те, що цей період може бути корисним для вас, щоб зосередитися на саморозвитку, переосмисленні своїх цінностей та метах, а також для знаходження внутрішньої гармонії. Це може допомогти вам підготуватися до майбутніх можливостей, коли вони з'являться.
-                    Отже, хоча шанси на знаходження роботи можуть бути обмеженими в цьому році, не варто втрачати надію. Продовжуйте працювати над своїми навичками і розвиватися, і можливо, що у майбутньому з'являться нові можливості для роботи.</p>
-            </div>
+            <div class="answer" id="answer-container"></div>
         </div>
     </div>
 
@@ -171,6 +170,7 @@
         </div>
     </footer>
     <script src="{{ asset('js/menu.js') }}"></script>
+    <script src="{{ asset('js/interpretation.js') }}"></script>
 
 </body>
 </html>
