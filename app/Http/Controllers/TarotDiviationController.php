@@ -111,11 +111,11 @@ class TarotDiviationController extends Controller
         $input = $request->all();
         $selectedCards = $input["selectedCards"];
         $question = $input["questionText"];
-        //["cardImage1.jpg", true],
+        $request = "Використовуй виключно українську мову. Дай повне тракнуваня розскдаду.";
         if ($question) {
-            $request = "\nПитання: '$question'" . "\nКарти:";
+            $request = $request . "\nДай відповіть на питання: \"'$question'" . "\". Карти:";
         } else {
-            $request = "Трактування до 200 слів:";
+            $request = $request . "\nКарти: ";
         }
         
         foreach ($selectedCards as $card) {
@@ -126,8 +126,8 @@ class TarotDiviationController extends Controller
                 $request = $request . " перевернута";
             }
         }
-        // Закоментовано, щоб для тестування не тратити гроші
-        $open_ai_key = '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';
+        /// Закоментовано, щоб для тестування не тратити гроші
+        $open_ai_key = env("TOKEN");;
         $open_ai = new OpenAi($open_ai_key);
         
         $chat = $open_ai->chat([
@@ -139,7 +139,7 @@ class TarotDiviationController extends Controller
                ],
            ],
            'temperature' => 1.0,
-           'max_tokens' => 500,
+           'max_tokens' => 1000,
            'frequency_penalty' => 0,
            'presence_penalty' => 0,
         ]);
