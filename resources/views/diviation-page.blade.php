@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/footer and heading.css">
     <link rel="stylesheet" href="css/diviation-page.css">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
 <header>
@@ -55,17 +56,12 @@
 
                 <div class="cards">
                     @foreach ($selectedCards as $card)
-                        @if ($card["reversed"])
-                            <img src="{{ asset('/storage/images/карти таро/' . $card['image']) }}" alt="" class="revers" сlass="card">
-                        @else
-                            <img src="{{ asset('/storage/images/карти таро/' . $card['image']) }}" alt="" сlass="card">
-                        @endif
-                        
+                        <img src="{{ asset('/storage/images/back of card.png')}}" alt="" class= "card" onclick="flipCard(this, '{{ $card['image'] }}', {{ $card['reversed'] }})">
                     @endforeach
                     
                 </div>
 
-                <button type="submit" class="big-button">Отримати відповідь</button>
+                <button type="submit" class="big-button" onclick="getAnswer()">Отримати відповідь</button>
             </div>
             <div class="answer" id="answer-container"></div>
             

@@ -31,7 +31,7 @@ Route::get("/interpretation", function () {
 
 Route::get("/diviation", [TarotDiviationController::class, "show"]);
 
-Route::post('/get-answer', [TarotDiviationController::class, "getAnswer"]);
+Route::post('/get-answer', [TarotDiviationController::class, "generateAnswer"]);
 
 
 

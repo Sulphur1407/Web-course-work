@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Http;
+use Orhanerday\OpenAi\OpenAI;
+
 
 class TarotDiviationController extends Controller
 {
@@ -33,11 +37,11 @@ class TarotDiviationController extends Controller
             "/Молодші аркани/Жезли/2 жезлів.jpg",
             "/Молодші аркани/Жезли/Трійка Жезлів.jpg",
             "/Молодші аркани/Жезли/Четвірка Жезлів.jpg",
-            "/Молодші аркани/Жезли/П'ятірка Жезлів.jpg",
+            "/Молодші аркани/Жезли/П’ятірка Жезлів.jpg",
             "/Молодші аркани/Жезли/Шестірка жезлів.jpg",
             "/Молодші аркани/Жезли/Семірка жезлів.jpg",
             "/Молодші аркани/Жезли/Вісімка Жезлів.jpg",
-            "/Молодші аркани/Жезли/Дев'ятка Жезлів.jpg",
+            "/Молодші аркани/Жезли/Дев’ятка Жезлів.jpg",
             "/Молодші аркани/Жезли/Десятка Жезлів.jpg",
             "/Молодші аркани/Жезли/Лицар Жезлів.jpg",
             "/Молодші аркани/Жезли/Король Жезлів.jpg",
@@ -101,14 +105,52 @@ class TarotDiviationController extends Controller
         return view('diviation-page', compact("selectedCards"));
     }
 
-    public function getAnswer(Request $request)
+    public function generateAnswer(Request $request)
     {
-        // Отримання даних з POST-запиту
-        $selectedCards = $request->input('selected_cards');
+        // Отримання вхідних даних з AJAX-запиту
+        $input = $request->all();
+        $selectedCards = $input["selectedCards"];
+        $question = $input["questionText"];
+        //["cardImage1.jpg", true],
+        if ($question) {
+            $request = "\nПитання: '$question'" . "\nКарти:";
+        } else {
+            $request = "Трактування до 200 слів:";
+        }
         
-        // Логіка обробки вибраних карт і отримання відповіді
+        foreach ($selectedCards as $card) {
+            $parts = explode("/", $card[0]);
+            $cardName = basename(end($parts), ".jpg");
+            $request = $request . "\n" . $cardName;
+            if ($card[1]) {
+                $request = $request . " перевернута";
+            }
+        }
+        /* Закоментовано, щоб для тестування не тратити гроші
+        $open_ai_key = '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';
+        $open_ai = new OpenAi($open_ai_key);
         
-        // Повернення відповіді у форматі JSON
-        return response()->json(['answer' => 'Ваша відповідь']);
+        $chat = $open_ai->chat([
+            'model' => 'gpt-3.5-turbo',
+            'messages' => [
+                [
+                    "role" => "user",
+                    "content" => $request
+                ],
+            ],
+            'temperature' => 1.0,
+            'max_tokens' => 2000,
+            'frequency_penalty' => 0,
+            'presence_penalty' => 0,
+         ]);
+         
+         
+         $d = json_decode($chat);
+         $generatedText = $d->choices[0]->message->content;
+         */
+        $generatedText = "Яке впливове значення має екологічний баланс нашої планети та як можемо забезпечити його збереження, здійснюючи стале розвиток, зберігаючи природні ресурси, зменшуючи забруднення та підтримуючи біорізноманіття, з метою забезпечення життя на Землі для майбутніх поколінь?";
+
+
+        return response()->json(['text' => $generatedText]);
     }
 }

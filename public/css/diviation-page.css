@@ -1,5 +1,21 @@
 /*Desktops*/
 @media screen {
+    .error-message {
+        background-color: #FFCF9D;
+        border-radius: 10px;
+        padding: 10px;
+        color: #000;
+        position: absolute;
+        top: calc(50% - 50px);
+        left: calc(50% - 30vw);
+        width: 60vw;
+        text-align: center;
+        top: 20vw;
+        font-size: min(3vw, 40px);
+      }
+
+    
+
     .main-content h1 {
         margin: 0 auto;
         font-family: 'Comfortaa';
@@ -48,6 +64,7 @@
         padding: 3.1vw;
         background: #FFA07A;
         border-radius: 6.2vw;
+        font-size: max(1.8vw, 10px);
     }
 
     .question-input {
@@ -77,11 +94,16 @@
 
     .cards img {
         width: 10vw;
+        height: 17.07vw;
         border-radius: 10px;
     }
 
     .revers {
         transform: rotate(180deg);
+    }
+
+    .card {
+        transform: rotate(0deg);
     }
 }
 
@@ -108,6 +130,10 @@
         font-size: max(2.8vw, 12px);
     }
 
+    .answer p {
+        font-size: max(2.8vw, 12px);
+    }
+
     .cards {
         display: flex;
         justify-content: space-between;
@@ -123,6 +149,7 @@
 
     .cards img {
         width: 17.5vw;
+        height: 29.9vw;
     }
 }
 
@@ -160,6 +187,7 @@
 
     .cards img {
         width: 23.5vw;
+        height: 40.1vw;
     }
 
     .cards img:last-child{
