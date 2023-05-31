@@ -126,29 +126,29 @@ class TarotDiviationController extends Controller
                 $request = $request . " перевернута";
             }
         }
-        /* Закоментовано, щоб для тестування не тратити гроші
-        $open_ai_key = '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';
+        // Закоментовано, щоб для тестування не тратити гроші
+        $open_ai_key = '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';
         $open_ai = new OpenAi($open_ai_key);
         
         $chat = $open_ai->chat([
-            'model' => 'gpt-3.5-turbo',
-            'messages' => [
-                [
-                    "role" => "user",
-                    "content" => $request
-                ],
-            ],
-            'temperature' => 1.0,
-            'max_tokens' => 2000,
-            'frequency_penalty' => 0,
-            'presence_penalty' => 0,
-         ]);
-         
-         
-         $d = json_decode($chat);
-         $generatedText = $d->choices[0]->message->content;
-         */
-        $generatedText = "Яке впливове значення має екологічний баланс нашої планети та як можемо забезпечити його збереження, здійснюючи стале розвиток, зберігаючи природні ресурси, зменшуючи забруднення та підтримуючи біорізноманіття, з метою забезпечення життя на Землі для майбутніх поколінь?";
+           'model' => 'gpt-3.5-turbo',
+           'messages' => [
+               [
+                   "role" => "user",
+                   "content" => $request
+               ],
+           ],
+           'temperature' => 1.0,
+           'max_tokens' => 500,
+           'frequency_penalty' => 0,
+           'presence_penalty' => 0,
+        ]);
+        
+        
+        $d = json_decode($chat);
+        $generatedText = ($d->choices[0]->message->content);
+        
+        //$generatedText = $request;
 
 
         return response()->json(['text' => $generatedText]);

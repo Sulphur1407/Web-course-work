@@ -37,10 +37,10 @@ function getAnswer() {
   } else {
     const questionText = document.getElementById("question").value;
 
-    if (questionText.length > 200) {
-      showError("Пробачте, але ваше питання задовне.Перефразуйте його, щоб зробити коротшим.");
+    if (questionText.length > 100) {
+      showError("Пробачте, але ваше питання задовге. Перефразуйте його, щоб зробити коротшим.");
     } else {
-      showError("Не лякайтесь. Генерація відповіді може зайняти до 10 секунд");
+      showError("Не лякайтесь. Генерація відповіді може зайняти до 20 секунд");
       var textContainer = document.getElementById("answer-container");
 
     // Отримання токену CSRF з мета-тегу
