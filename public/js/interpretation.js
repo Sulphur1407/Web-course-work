@@ -31,12 +31,31 @@ function checkUniqueElements(arr) {
     return true;
   }
 
+  function checkUndefinedWord(array) {
+    for (let i = 0; i < array.length; i++) {
+      const innerArray = array[i];
+      if (innerArray[0].includes("undefined")) {
+        return true;
+      }
+    }
+    return false;
+  }
+
 function getAnswer() {
+    console.log(selectedCard[0][0]);
+    console.log(selectedCard[1][0]);
+    console.log(selectedCard[2][0]);
+
+    if (checkUndefinedWord(selectedCard)){
+        showError("Спочатку заповніть всі карти");
+        return;
+    }
+
     if (!checkUniqueElements(selectedCard)){
         showError("Розсклад може містити лише унікальні карти");
         return;
     } 
-
+   
     const questionText = document.getElementById("question").value
     if (questionText.length > 100) {
       showError("Пробачте, але ваше питання задовге. Перефразуйте його, щоб зробити коротшим.");
@@ -89,6 +108,8 @@ const buttonOn5 = document.getElementById('myButtonOn5');
 const buttonOn6 = document.getElementById('myButtonOn6');
 
 let isHight1 = 1;
+let isHight2 = 1;
+let isHight3 = 1;
 let isReversed1 = 0;
 let isReversed2 = 0;
 let isReversed3 = 0;
@@ -96,10 +117,11 @@ let scr1 = "/";
 let scr2 = "/";
 let scr3 = "/";
 let card1, card2, card3;
+let suit1, suit2, suit3;
 
 const HightCards = [
     "0 - Дурень (The Fool)",
-    "I - Маг (The Magician)",
+    "I - Чаклун (The Magician)",
     "II - Верховна Жриця (The High Priestess)",
     "III - Імператриця (The Empress)",
     "IV - Імператор (The Emperor)",
@@ -114,7 +136,7 @@ const HightCards = [
     "XIII - Смерть (Death)",
     "XIV - Помірність (Temperance)",
     "XV - Диявол (The Devil)",
-    "XVI - Башта (The Tower)",
+    "XVI - Вежа (The Tower)",
     "XVII - Зірка (The Star)",
     "XVIII - Місяць (The Moon)",
     "XIX - Сонце (The Sun)",
@@ -124,7 +146,6 @@ const HightCards = [
 
 const ValueCards = [
     "Туз",
-    "I",
     "II",
     "III",
     "IV",
@@ -148,25 +169,96 @@ const SuitCard = [
 ]
 
 function updateCards(){
-    let src1;
+    let src1, suitCard1, src2, suitCard2, src3, suitCard3;
+
+    switch (suit1) {
+        case "Жезли":
+            suitCard1 = "Жезлів";
+            break;
+        case "Кубки":
+            suitCard1 = "Кубків";
+            break;
+        case "Мечі":
+            suitCard1 = "Мечів"
+            break;
+        case "Пентаклі":
+            suitCard1 = "Пентаклів"
+            break;                         
+    } 
+
+    switch (suit2) {
+        case "Жезли":
+            suitCard2 = "Жезлів";
+            break;
+        case "Кубки":
+            suitCard2 = "Кубків";
+            break;
+        case "Мечі":
+            suitCard2 = "Мечів"
+            break;
+        case "Пентаклі":
+            suitCard2 = "Пентаклів"
+            break;                         
+    } 
+
+    switch (suit3) {
+        case "Жезли":
+            suitCard3 = "Жезлів";
+            break;
+        case "Кубки":
+            suitCard3 = "Кубків";
+            break;
+        case "Мечі":
+            suitCard3 = "Мечів"
+            break;
+        case "Пентаклі":
+            suitCard3 = "Пентаклів"
+            break;                         
+    } 
+
     if (isHight1){
         src1 = "Старші аркани/" + card1 + ".jpg";
     } else {
-        src1 = "Молодші аркани/";
+        src1 = "Молодші аркани/" + suit1 + "/" + card1 + " " + suitCard1+ ".jpg";
     }
     if (isReversed1){
         document.getElementById("img1").style.transform = 'rotate(180deg)';
     } else {
         document.getElementById("img1").style.transform = 'rotate(0deg)';
     }
+
+    if (isHight2) {
+        src2 = "Старші аркани/" + card2 + ".jpg";
+    } else {
+        src2 = "Молодші аркани/" + suit2 + "/" + card2 + " " + suitCard2 + ".jpg";
+    }
+    if (isReversed2) {
+        document.getElementById("img2").style.transform = 'rotate(180deg)';
+    } else {
+        document.getElementById("img2").style.transform = 'rotate(0deg)';
+    }
+    
+    if (isHight3) {
+        src3 = "Старші аркани/" + card3 + ".jpg";
+    } else {
+        src3 = "Молодші аркани/" + suit3 + "/" + card3 + " " + suitCard3 + ".jpg";
+    }
+    if (isReversed3) {
+        document.getElementById("img3").style.transform = 'rotate(180deg)';
+    } else {
+        document.getElementById("img3").style.transform = 'rotate(0deg)';
+    }
+    
     document.getElementById("img1").src = "/storage/images/карти таро/" + src1;
-    console.log(src1);
     document.getElementById("img2").src = "/storage/images/карти таро/" + src2;
     document.getElementById("img3").src = "/storage/images/карти таро/" + src3;
+    
+    
 
     selectedCard[0] = [src1, isReversed1];
     selectedCard[1] = [src2, isReversed2];
     selectedCard[2] = [src3, isReversed3];
+    
 }
 
 document.getElementById('myButton1').addEventListener('click', function(){
@@ -186,21 +278,29 @@ document.getElementById('myButton2').addEventListener('click', function(){
 document.getElementById('myButton3').addEventListener('click', function(){
     buttonOn3.style.visibility = "visible";
     buttonOn4.style.visibility = "hidden";
+    isHight2 = 1;
+    updateCards();
 });
 
 document.getElementById('myButton4').addEventListener('click', function(){
     buttonOn3.style.visibility = "hidden";
     buttonOn4.style.visibility = "visible";
+    isHight2 = 0;
+    updateCards();
 });
 
 document.getElementById('myButton5').addEventListener('click', function(){
     buttonOn5.style.visibility = "visible";
     buttonOn6.style.visibility = "hidden";
+    isHight3 = 1;
+    updateCards();
 });
 
 document.getElementById('myButton6').addEventListener('click', function(){
     buttonOn5.style.visibility = "hidden";
     buttonOn6.style.visibility = "visible";
+    isHight3 = 0;
+    updateCards();
 });
 
 const cheakBoxOn1 = document.getElementById('CheakBoxOn1');
@@ -208,31 +308,21 @@ const cheakBoxOn2 = document.getElementById('CheakBoxOn2');
 const cheakBoxOn3 = document.getElementById('CheakBoxOn3');
 
 document.getElementById('CheakBox1').addEventListener("click", function(){
-      if (cheakBoxOn1.style.visibility == "hidden"){
-          cheakBoxOn1.style.visibility = "visible"
-          isReversed1 = 1;
-      } else {
-          cheakBoxOn1.style.visibility = "hidden"
-          isReversed1 = 0;
-      }
-      updateCards();
+    cheakBoxOn1.classList.toggle('hidden');
+    isReversed1 = cheakBoxOn1.classList.contains('hidden') ? 0 : 1;
+    updateCards();
 });
+  
 
 document.getElementById('CheakBox2').addEventListener("click", function(){
-    if (cheakBoxOn2.style.visibility == "hidden"){
-        cheakBoxOn2.style.visibility = "visible"
-    } else {
-        cheakBoxOn2.style.visibility = "hidden"
-    }
+    cheakBoxOn2.classList.toggle('hidden');
+    isReversed2 = cheakBoxOn2.classList.contains('hidden') ? 0 : 1;
     updateCards();
 });
 
 document.getElementById('CheakBox3').addEventListener("click", function(){
-    if (cheakBoxOn3.style.visibility == "hidden"){
-        cheakBoxOn3.style.visibility = "visible"
-    } else {
-        cheakBoxOn3.style.visibility = "hidden"
-    }
+    cheakBoxOn3.classList.toggle('hidden');
+    isReversed3 = cheakBoxOn3.classList.contains('hidden') ? 0 : 1;
     updateCards();
 });
 
@@ -266,10 +356,17 @@ listItem1.addEventListener('click', function() {
       // Додавання обробника події для вибору карти
       cardItem.addEventListener('click', function() {
         listItem1.textContent = card;
-        var startIndex = card.indexOf('-') + 1; // Знаходимо початковий індекс після "-"
-        var endIndex = card.indexOf('(') - 1; // Знаходимо кінцевий індекс перед "("
-        var result = card.substring(startIndex, endIndex).trim(); // Витягуємо потрібну частину та видаляємо зайві пробіли
-        card1 = result;
+        if (isHight1){
+            var startIndex = card.indexOf('-') + 1; // Знаходимо початковий індекс після "-"
+            var endIndex = card.indexOf('(') - 1; // Знаходимо кінцевий індекс перед "("
+            var result = card.substring(startIndex, endIndex).trim(); // Витягуємо потрібну частину та видаляємо зайві пробіли
+            card1 = result;
+            listItem1Add.textContent = " ";
+        } else {
+            suit1 = card;
+            
+        }
+        
       });
   
       cardList.appendChild(cardItem);
@@ -306,10 +403,12 @@ listItem1Add.addEventListener('click', function() {
       cardsData.forEach(card => {
       const cardItem = document.createElement('li');
       cardItem.textContent = card;
+      
 
       // Додавання обробника події для вибору карти
       cardItem.addEventListener('click', function() {
-          listItem1Add.textContent = card;
+            card1 = card;
+            listItem1Add.textContent = card;
         //Додавання карти
       });
 
@@ -321,5 +420,194 @@ listItem1Add.addEventListener('click', function() {
 
     // Додавання списку карт в контейнер
     dropdownMenu2.appendChild(cardList);
+    updateCards();
+});
+
+const listItem2 = document.getElementById('listItem2');
+const listItem2Add = document.getElementById('listItem2Add');
+const dropdownMenu3 = document.getElementById('dropdownMenu3');
+const dropdownMenu4 = document.getElementById('dropdownMenu4');
+
+listItem2.addEventListener('click', function() {
+
+    dropdownMenu3.classList.toggle('hidden');
+
+    // Створення списку карт
+    const cardList = document.createElement('ul');
+    cardList.classList.add('card-list');
+
+    let cardsData;
+  
+    // Приклад вхідних даних з параметрами карт
+    if (isHight2) {
+        cardsData = HightCards;
+    } else {
+        cardsData = SuitCard;
+    }
+  
+    // Створення елементів списку карт
+    cardsData.forEach(card => {
+        const cardItem = document.createElement('li');
+        cardItem.textContent = card;
+  
+        // Додавання обробника події для вибору карти
+        cardItem.addEventListener('click', function() {
+            listItem2.textContent = card;
+            if (isHight2){
+                var startIndex = card.indexOf('-') + 1; // Знаходимо початковий індекс після "-"
+                var endIndex = card.indexOf('(') - 1; // Знаходимо кінцевий індекс перед "("
+                var result = card.substring(startIndex, endIndex).trim(); // Витягуємо потрібну частину та видаляємо зайві пробіли
+                card2 = result;
+                listItem2Add.textContent = " ";
+            } else {
+                suit2 = card;
+            }
+        });
+  
+        cardList.appendChild(cardItem);
+    });
+  
+    // Очищення контейнера перед додаванням списку карт
+    dropdownMenu3.innerHTML = '';
+  
+    // Додавання списку карт в контейнер
+    dropdownMenu3.appendChild(cardList);
+    updateCards();
+});
+
+listItem2Add.addEventListener('click', function() {
+    if (isHight2){
+        return;
+    }
+    dropdownMenu4.classList.toggle('hidden');
+
+    // Створення списку карт
+    const cardList = document.createElement('ul');
+    cardList.classList.add('card-list');
+
+    let cardsData;
+  
+    // Приклад вхідних даних з параметрами карт
+    if (!isHight2) {
+        cardsData = ValueCards;
+    } else {
+        cardData ="Виберіть спочатку старший чи молодший аркан"
+    }
+
+    // Створення елементів списку карт
+    cardsData.forEach(card => {
+        const cardItem = document.createElement('li');
+        cardItem.textContent = card;
+      
+        // Додавання обробника події для вибору карти
+        cardItem.addEventListener('click', function() {
+            card2 = card;
+            listItem2Add.textContent = card;
+            //Додавання карти
+        });
+
+        cardList.appendChild(cardItem);
+    });
+
+    // Очищення контейнера перед додаванням списку карт
+    dropdownMenu4.innerHTML = '';
+
+    // Додавання списку карт в контейнер
+    dropdownMenu4.appendChild(cardList);
+    updateCards();
+});
+
+
+const listItem3 = document.getElementById('listItem5');
+const listItem3Add = document.getElementById('listItem5Add');
+const dropdownMenu5 = document.getElementById('dropdownMenu5');
+const dropdownMenu6 = document.getElementById('dropdownMenu6');
+
+listItem5.addEventListener('click', function() {
+
+    dropdownMenu5.classList.toggle('hidden');
+
+    // Створення списку карт
+    const cardList = document.createElement('ul');
+    cardList.classList.add('card-list');
+
+    let cardsData;
+  
+    // Приклад вхідних даних з параметрами карт
+    if (isHight3) {
+        cardsData = HightCards;
+    } else {
+        cardsData = SuitCard;
+    }
+  
+    // Створення елементів списку карт
+    cardsData.forEach(card => {
+        const cardItem = document.createElement('li');
+        cardItem.textContent = card;
+  
+        // Додавання обробника події для вибору карти
+        cardItem.addEventListener('click', function() {
+            listItem3.textContent = card;
+            if (isHight3){
+                var startIndex = card.indexOf('-') + 1; // Знаходимо початковий індекс після "-"
+                var endIndex = card.indexOf('(') - 1; // Знаходимо кінцевий індекс перед "("
+                var result = card.substring(startIndex, endIndex).trim(); // Витягуємо потрібну частину та видаляємо зайві пробіли
+                card3 = result;
+                listItem3Add.textContent = " ";
+            } else {
+                suit3 = card;
+            }
+        });
+  
+        cardList.appendChild(cardItem);
+    });
+  
+    // Очищення контейнера перед додаванням списку карт
+    dropdownMenu5.innerHTML = '';
+  
+    // Додавання списку карт в контейнер
+    dropdownMenu5.appendChild(cardList);
+    updateCards();
+});
+
+listItem3Add.addEventListener('click', function() {
+    if (isHight3){
+        return;
+    }
+    dropdownMenu6.classList.toggle('hidden');
+
+    // Створення списку карт
+    const cardList = document.createElement('ul');
+    cardList.classList.add('card-list');
+
+    let cardsData;
+  
+    // Приклад вхідних даних з параметрами карт
+    if (!isHight3) {
+        cardsData = ValueCards;
+    } else {
+        cardData ="Виберіть спочатку старший чи молодший аркан"
+    }
+
+    // Створення елементів списку карт
+    cardsData.forEach(card => {
+        const cardItem = document.createElement('li');
+        cardItem.textContent = card;
+      
+        // Додавання обробника події для вибору карти
+        cardItem.addEventListener('click', function() {
+            card3 = card;
+            listItem3Add.textContent = card;
+            //Додавання карти
+        });
+
+        cardList.appendChild(cardItem);
+    });
+
+    // Очищення контейнера перед додаванням списку карт
+    dropdownMenu6.innerHTML = '';
+
+    // Додавання списку карт в контейнер
+    dropdownMenu6.appendChild(cardList);
     updateCards();
 });

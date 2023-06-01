@@ -79,14 +79,14 @@
                     </div>
                     <div class="dropdown-menu hidden" id="dropdownMenu2"></div>
                     <div class="cheak-box">
-                        <div id="CheakBox1" class="big-box-choose"><div class="small-box-choose" id="CheakBoxOn1"></div></div>
+                        <div id="CheakBox1" class="big-box-choose"><div class="small-box-choose hidden visible" id="CheakBoxOn1"></div></div>
                         <p>Перевернута</p>
                     </div>
                 </div>
             </div>
 
             <div class="card-choose">
-                <img id="img2" src="/storage/images/карти таро/Молодші аркани/Мечі/4 мечів.jpg" alt="">
+                <img id="img2" src="/storage/images/back of card.png" onerror="this.src='/storage/images/back of card.png'" class="card">
                 <div class="options">
                     <div class="cheak-boxes">
                         <div class="cheak-box">
@@ -99,23 +99,26 @@
                         </div>
                     </div>
 
-                    <div class="list" id="toggleButton">
-                        <p>Мечі</p>
+                    <div class="list" id="listItem2">
+                      <p>Зробіть вибір</p>
+                      <img src="/storage/images/icons/arrow.svg" alt="">
+                    </div>
+                    <div class="dropdown-menu hidden" id="dropdownMenu3"></div>
+
+                    <div class="list" id="listItem2Add">
+                        <p class="invisible-text">3</p>
                         <img src="/storage/images/icons/arrow.svg" alt="">
                     </div>
-                    <div class="list">
-                        <p>IV</p>
-                        <img src="/storage/images/icons/arrow.svg" alt="">
-                    </div>
+                    <div class="dropdown-menu hidden" id="dropdownMenu4"></div>
                     <div class="cheak-box">
-                        <div id="CheakBox2" class="big-box-choose"><div class="small-box-choose" id="CheakBoxOn2"></div></div>
+                        <div id="CheakBox2" class="big-box-choose"><div class="small-box-choose hidden visible" id="CheakBoxOn2"></div></div>
                         <p>Перевернута</p>
                     </div>
                 </div>
             </div>
 
             <div class="card-choose">
-                <img id="img3" src="/storage/images/карти таро/Молодші аркани/Кубки/Лицар Кубків.jpg" alt="" class="revers">
+                <img id="img3" src="/storage/images/back of card.png" onerror="this.src='/storage/images/back of card.png'" class="card">
                 <div class="options">
                     <div class="cheak-boxes">
                         <div class="cheak-box">
@@ -127,21 +130,25 @@
                             <p>Молодша аркана</p>
                         </div>
                     </div>
-
-                   <div class="list">
-                        <p>Кубки</p>
+            
+                    <div class="list" id="listItem5">
+                        <p>Зробіть вибір</p>
                         <img src="/storage/images/icons/arrow.svg" alt="">
                     </div>
-                    <div class="list">
-                        <p>Рицaр</p>
+                    <div class="dropdown-menu hidden" id="dropdownMenu5"></div>
+            
+                    <div class="list" id="listItem5Add">
+                        <p class="invisible-text">5</p>
                         <img src="/storage/images/icons/arrow.svg" alt="">
                     </div>
+                    <div class="dropdown-menu hidden" id="dropdownMenu6"></div>
                     <div class="cheak-box">
-                        <div id="CheakBox3" class="big-box-choose"><div class="small-box-choose" id="CheakBoxOn3"></div></div>
+                        <div id="CheakBox3" class="big-box-choose"><div class="small-box-choose hidden visible" id="CheakBoxOn3"></div></div>
                         <p>Перевернута</p>
                     </div>
                 </div>
             </div>
+
 
             <button type="submit" class="big-button" onclick="getAnswer()">Отримати відповідь</button>
 

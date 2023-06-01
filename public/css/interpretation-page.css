@@ -20,22 +20,19 @@
       
       .dropdown-menu {
         z-index: 10;
-        padding: 1vw 0;
         border-radius: max(20px, 4vw);
         list-style-type: none;
         background: #FFA07A;
         font-size: max(1.8vw, 8px);
       }
 
+    #dropdownMenu2, #dropdownMenu4, #dropdownMenu6 {
+        margin-bottom: max(1.8vw, 10px);
+    }
 
       ul {
         list-style-type: none;
         padding-left: 0;
-      }
-      
-      
-      .hidden {
-        display: none;
       }
       
       
@@ -186,8 +183,19 @@
         height: 2.4vw;
         background: #FFC87D;
         border-radius: max(0.3vw, 3px);
-        visibility : hidden;
+        visibility: hidden;
     }
+
+    .hidden {
+        display: none;
+      }
+
+    .visible {
+        visibility: visible;
+    }
+
+    
+    
 
     .cheak-box {
         display: flex;
