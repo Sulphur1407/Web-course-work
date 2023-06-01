@@ -191,10 +191,7 @@
         display: none;
       }
 
-    .visible {
-        visibility: visible;
-    }
-
+  
     
     
 
@@ -247,6 +244,11 @@
     .invisible-text {
         color: transparent;
     }
+
+    .visible, #myButtonOn1, #myButtonOn3, #myButtonOn5 {
+        visibility: visible;
+    }
+
 }
 
 

@@ -357,10 +357,10 @@ listItem1.addEventListener('click', function() {
             var endIndex = card.indexOf('(') - 1; // Знаходимо кінцевий індекс перед "("
             var result = card.substring(startIndex, endIndex).trim(); // Витягуємо потрібну частину та видаляємо зайві пробіли
             card1 = result;
-            listItem1Add.textContent = " ";
+            listItem1Add.textContent = "Вже вибрано Старшу аркану";
         } else {
             suit1 = card;
-            
+            listItem1Add.textContent = "Виберіть значення карти";
         }
         
       });
@@ -454,7 +454,7 @@ listItem2.addEventListener('click', function() {
                 var endIndex = card.indexOf('(') - 1; // Знаходимо кінцевий індекс перед "("
                 var result = card.substring(startIndex, endIndex).trim(); // Витягуємо потрібну частину та видаляємо зайві пробіли
                 card2 = result;
-                listItem2Add.textContent = " ";
+                listItem2Add.textContent = "Вже вибрано Старшу аркану";
             } else {
                 suit2 = card;
             }
@@ -549,7 +549,7 @@ listItem5.addEventListener('click', function() {
                 var endIndex = card.indexOf('(') - 1; // Знаходимо кінцевий індекс перед "("
                 var result = card.substring(startIndex, endIndex).trim(); // Витягуємо потрібну частину та видаляємо зайві пробіли
                 card3 = result;
-                listItem3Add.textContent = " ";
+                listItem3Add.textContent = "Вже вибрано Старшу аркану";
             } else {
                 suit3 = card;
             }
