@@ -58,7 +58,7 @@
                 <a href="{{ url('/all-cards/magician') }}">
                     <img src="/storage/images/карти таро/Старші аркани/Чаклун.jpg" alt="">
                 </a>
-                <a href="{{ url('/all-cards/high_priestess') }}">
+                <a href="{{ url('/all-cards/high-priestess') }}">
                     <img src="/storage/images/карти таро/Старші аркани/Верховна Жриця.jpg" alt="">
                 </a>
                 <a href="{{ url('/all-cards/empress') }}">
@@ -82,10 +82,10 @@
                 <a href="{{ url('/all-cards/hermit') }}">
                     <img src="/storage/images/карти таро/Старші аркани/Відлюдник.jpg" alt="">
                 </a>
-                <a href="{{ url('/all-cards/wheel_of_fortune') }}">
+                <a href="{{ url('/all-cards/wheel-of-fortune') }}">
                     <img src="/storage/images/карти таро/Старші аркани/Колесо Фортуни.jpg" alt="">
                 </a>
-                <a href="{{ url('/all-cards/justise') }}">
+                <a href="{{ url('/all-cards/justice') }}">
                     <img src="/storage/images/карти таро/Старші аркани/Справедливість.jpg" alt="">
                 </a>
                 <a href="{{ url('/all-cards/hangedman') }}">

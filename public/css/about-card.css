@@ -37,7 +37,7 @@
         font-family: 'Comfortaa';
         font-style: normal;
         font-weight: 400;
-        font-size: max(calc(9px + 0.5vw), 10px);
+        font-size: max(1.8vw, 10px);
         display: flex;
         align-items: center;
         text-align: center;
