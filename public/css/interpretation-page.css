@@ -126,6 +126,7 @@
         padding: 3.1vw;
         background: #FFA07A;
         border-radius: 6.2vw;
+        font-size: max(1.8vw, 10px);
     }
 
     .question {
@@ -231,6 +232,7 @@
         margin: max(1.8vw, 10px) 0;
         background: #FFA07A;
         border-radius: 6.2vw;
+        font-size: 1.6vw;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -250,6 +252,7 @@
 
 /*Laptop*/
 @media screen and (max-width: 1023px){
+
     .big-button {
         padding: 3vw;
         background-size: 398px 265px;
@@ -286,7 +289,9 @@
     .cheak-box p {
         font-size: max(12px, 2vw);
     }
-
+    .answer p {
+        font-size: max(2.8vw, 12px);
+    }
 }
 
 

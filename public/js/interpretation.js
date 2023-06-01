@@ -42,10 +42,6 @@ function checkUniqueElements(arr) {
   }
 
 function getAnswer() {
-    console.log(selectedCard[0][0]);
-    console.log(selectedCard[1][0]);
-    console.log(selectedCard[2][0]);
-
     if (checkUndefinedWord(selectedCard)){
         showError("Спочатку заповніть всі карти");
         return;
