@@ -123,73 +123,185 @@
             <h1>Молодші Аркани</h1>
             <p>Жезли (Палиці, Скіпетри) — ця масть в колоді карт Таро, астрологічно пов’язана з елементом Вогонь і Знаками Зодіаку Овен, Лев і Стрілець. У ворожіннях, прогнозах і розкладах Жезли зазвичай символізують сферу, пов’язану зі справами, зобов’язаннями і обов’язками людини, бізнесом і фінансами, роботою і кар’єрою того кому гадають. Вони описують плани і шляхи їх реалізації, перешкоди в досягненні цілей, тенденції загального просування справ і захисту інтересів.</p>
             <div class="cards">
-                <img src="/storage/images/карти таро/Молодші аркани/Жезли/Туз жезлів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Жезли/II жезлів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Жезли/III Жезлів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Жезли/IV Жезлів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Жезли/V Жезлів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Жезли/VI жезлів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Жезли/VII жезлів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Жезли/VIII Жезлів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Жезли/IX Жезлів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Жезли/X Жезлів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Жезли/Король Жезлів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Жезли/Королева Жезлів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Жезли/Лицар Жезлів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Жезли/Паж Жезлів.jpg" alt="">
+                <a href="{{ url('/all-cards/ace-of-wands') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Жезли/Туз жезлів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/II-of-wands') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Жезли/II жезлів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/III-of-wands') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Жезли/III Жезлів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/IV-of-wands') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Жезли/IV Жезлів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/V-of-wands') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Жезли/V Жезлів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/VI-of-wands') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Жезли/VI жезлів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/VII-of-wands') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Жезли/VII жезлів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/VIII-of-wands') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Жезли/VIII Жезлів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/IX-of-wands') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Жезли/IX Жезлів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/X-of-wands') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Жезли/X Жезлів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/king-of-wands') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Жезли/Король Жезлів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/queen-of-wands') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Жезли/Королева Жезлів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/knight-of-wands') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Жезли/Лицар Жезлів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/page-of-wands') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Жезли/Паж Жезлів.jpg" alt="">
+                </a>
             </div>
-            <p>Кубки (Чаші/storage/) – це друга масть в колоді карт Таро, астрологічно пов’язана з елементом Вода, підвищеною чутливістю і Знаками Зодіаку Риби, Рак і Скорпіон. Символом масті є Золотий кубок, наповнений нектаром. У ворожіннях, розкладах і прогнозах Кубки символізують сферу емоцій, почуттів і переживань людини. Карти масті кубків, будучи символами любові і щастя, описують в цілому сприятливі ситуації або, принаймні, говорять про поліпшення нещасливих обставин. Розкриваючи хід подій, Чаші демонструють аспекти, які будуть працювати на користь ворожбитів.</p>
+            <p>Кубки (Чаші) – це друга масть в колоді карт Таро, астрологічно пов’язана з елементом Вода, підвищеною чутливістю і Знаками Зодіаку Риби, Рак і Скорпіон. Символом масті є Золотий кубок, наповнений нектаром. У ворожіннях, розкладах і прогнозах Кубки символізують сферу емоцій, почуттів і переживань людини. Карти масті кубків, будучи символами любові і щастя, описують в цілому сприятливі ситуації або, принаймні, говорять про поліпшення нещасливих обставин. Розкриваючи хід подій, Чаші демонструють аспекти, які будуть працювати на користь ворожбитів.</p>
             <div class="cards">
-                <img src="/storage/images/карти таро/Молодші аркани/Кубки/Туз Кубків.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Кубки/II Кубків.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Кубки/III Кубків.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Кубки/IV Кубків.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Кубки/V Кубків.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Кубки/VI Кубків.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Кубки/VII Кубків.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Кубки/VIII Кубків.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Кубки/IX Кубків.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Кубки/X Кубків.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Кубки/Король Кубків.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Кубки/Королева Кубків.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Кубки/Лицар Кубків.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Кубки/Паж Кубків.jpg" alt="">
+            <a href="{{ url('/all-cards/ace-of-cups') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Кубки/Туз Кубків.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/II-of-cups') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Кубки/II Кубків.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/III-of-cups') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Кубки/III Кубків.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/IV-of-cups') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Кубки/IV Кубків.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/V-of-cups') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Кубки/V Кубків.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/VI-of-cups') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Кубки/VI Кубків.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/VII-of-cups') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Кубки/VII Кубків.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/VIII-of-cups') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Кубки/VIII Кубків.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/IX-of-cups') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Кубки/IX Кубків.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/X-of-cups') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Кубки/X Кубків.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/king-of-cups') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Кубки/Король Кубків.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/queen-of-cups') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Кубки/Королева Кубків.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/knight-of-cups') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Кубки/Лицар Кубків.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/page-of-cups') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Кубки/Паж Кубків.jpg" alt="">
+                </a>
             </div>
 
             <p>Мечі – масть астрологічно пов’язана з елементом Повітря і Знаками Зодіаку Близнюки, Терези, Водолій. Символом масті є меч, який, як правило, зображується у вигляді клинка, бойової шаблі або важкого дворучного меча. У ворожіннях, розкладах і прогнозах Мечі символізують сторону життя, яка пов’язана з мисленням; сферу протистоянь, подолання перешкод, боротьби, прагнення до лідерства і перемоги.</p>
             <div class="cards">
-                <img src="/storage/images/карти таро/Молодші аркани/Мечі/Туз Мечів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Мечі/II Мечів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Мечі/III Мечів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Мечі/IV Мечів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Мечі/V Мечів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Мечі/VI Мечів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Мечі/VII Мечів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Мечі/VIII Мечів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Мечі/IX Мечів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Мечі/X Мечів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Мечі/Король Мечів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Мечі/Королева Мечів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Мечі/Лицар Мечів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Мечі/Паж Мечів.jpg" alt="">
+                <a href="{{ url('/all-cards/ace-of-swords') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Мечі/Туз мечів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/II-of-swords') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Мечі/II мечів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/III-of-swords') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Мечі/III мечів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/IV-of-swords') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Мечі/IV мечів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/V-of-swords') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Мечі/V мечів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/VI-of-swords') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Мечі/VI мечів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/VII-of-swords') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Мечі/VII мечів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/VIII-of-swords') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Мечі/VIII мечів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/IX-of-swords') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Мечі/IX мечів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/X-of-swords') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Мечі/X мечів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/king-of-swords') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Мечі/Король мечів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/queen-of-swords') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Мечі/Королева мечів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/knight-of-swords') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Мечі/Лицар мечів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/page-of-swords') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Мечі/Паж мечів.jpg" alt="">
+                </a>
             </div>
             
             <p>Пентаклі (Денарії, Монети, Диски) – ця масть в колоді карт Таро, астрологічно пов’язана з елементом Земля, раціональної логікою і Знаками Зодіаку Козеріг, Діва і Телець. Символом масті є монета із зображенням п’ятикутної зірки Соломона. У ворожіннях, розкладах і прогнозах Пентаклі символізують сферу, пов’язану з грошима, заробітком, власністю, соціальним статусом, безпекою і політичним впливом людини. Карти масті Монет описують ситуації і обставини, що включають в себе питання матеріального добробуту, комерційні інтереси, гроші і грошові сфери. Розкриваючи хід подій, Диски демонструють фінансові та соціальні аспекти.</p>
             <div class="cards">
-                <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/Туз пентаклів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/II пентаклів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/III пентаклів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/IV пентаклів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/V пентаклів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/VI пентаклів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/VII пентаклів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/VIII пентаклів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/IX пентаклів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/X пентаклів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/Король пентаклів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/Королева пентаклів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/Лицар пентаклів.jpg" alt="">
-                <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/Паж пентаклів.jpg" alt="">
+                <a href="{{ url('/all-cards/ace-of-pentacles') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/Туз пентаклів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/II-of-pentacles') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/II пентаклів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/III-of-pentacles') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/III пентаклів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/IV-of-pentacles') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/IV пентаклів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/V-of-pentacles') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/V пентаклів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/VI-of-pentacles') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/VI пентаклів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/VII-of-pentacles') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/VII пентаклів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/VIII-of-pentacles') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/VIII пентаклів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/IX-of-pentacles') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/IX пентаклів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/X-of-pentacles') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/X пентаклів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/king-of-pentacles') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/Король пентаклів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/queen-of-pentacles') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/Королева пентаклів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/knight-of-pentacles') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/Лицар пентаклів.jpg" alt="">
+                </a>
+                <a href="{{ url('/all-cards/page-of-pentacles') }}">
+                    <img src="/storage/images/карти таро/Молодші аркани/Пентаклі/Паж пентаклів.jpg" alt="">
+                </a>
             </div>
         </div>
     </div>
