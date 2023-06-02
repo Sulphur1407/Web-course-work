@@ -245,9 +245,15 @@ function updateCards(){
         document.getElementById("img3").style.transform = 'rotate(0deg)';
     }
     
-    document.getElementById("img1").src = "/storage/images/карти таро/" + src1;
-    document.getElementById("img2").src = "/storage/images/карти таро/" + src2;
-    document.getElementById("img3").src = "/storage/images/карти таро/" + src3;
+    if (!src1.includes("undefined")){
+        document.getElementById("img1").src = "/storage/images/карти таро/" + src1;
+    }
+    if (!src2.includes("undefined")){
+        document.getElementById("img2").src = "/storage/images/карти таро/" + src2;
+    }
+    if (!src3.includes("undefined")){
+        document.getElementById("img3").src = "/storage/images/карти таро/" + src3;
+    }
     
     
 
@@ -352,6 +358,7 @@ listItem1.addEventListener('click', function() {
       // Додавання обробника події для вибору карти
       cardItem.addEventListener('click', function() {
         listItem1.textContent = card;
+        dropdownMenu1.classList.toggle('hidden');
         if (isHight1){
             var startIndex = card.indexOf('-') + 1; // Знаходимо початковий індекс після "-"
             var endIndex = card.indexOf('(') - 1; // Знаходимо кінцевий індекс перед "("
@@ -362,7 +369,7 @@ listItem1.addEventListener('click', function() {
             suit1 = card;
             listItem1Add.textContent = "Виберіть значення карти";
         }
-        
+        updateCards();
       });
   
       cardList.appendChild(cardItem);
@@ -403,8 +410,10 @@ listItem1Add.addEventListener('click', function() {
 
       // Додавання обробника події для вибору карти
       cardItem.addEventListener('click', function() {
+            dropdownMenu2.classList.toggle('hidden');
             card1 = card;
             listItem1Add.textContent = card;
+            updateCards();
         //Додавання карти
       });
 
@@ -416,7 +425,6 @@ listItem1Add.addEventListener('click', function() {
 
     // Додавання списку карт в контейнер
     dropdownMenu2.appendChild(cardList);
-    updateCards();
 });
 
 const listItem2 = document.getElementById('listItem2');
@@ -449,6 +457,7 @@ listItem2.addEventListener('click', function() {
         // Додавання обробника події для вибору карти
         cardItem.addEventListener('click', function() {
             listItem2.textContent = card;
+            dropdownMenu3.classList.toggle('hidden');
             if (isHight2){
                 var startIndex = card.indexOf('-') + 1; // Знаходимо початковий індекс після "-"
                 var endIndex = card.indexOf('(') - 1; // Знаходимо кінцевий індекс перед "("
@@ -458,6 +467,7 @@ listItem2.addEventListener('click', function() {
             } else {
                 suit2 = card;
             }
+            updateCards();
         });
   
         cardList.appendChild(cardItem);
@@ -497,9 +507,11 @@ listItem2Add.addEventListener('click', function() {
       
         // Додавання обробника події для вибору карти
         cardItem.addEventListener('click', function() {
+            dropdownMenu4.classList.toggle('hidden');
             card2 = card;
             listItem2Add.textContent = card;
             //Додавання карти
+            updateCards();
         });
 
         cardList.appendChild(cardItem);
@@ -543,6 +555,7 @@ listItem5.addEventListener('click', function() {
   
         // Додавання обробника події для вибору карти
         cardItem.addEventListener('click', function() {
+            dropdownMenu5.classList.toggle('hidden');
             listItem3.textContent = card;
             if (isHight3){
                 var startIndex = card.indexOf('-') + 1; // Знаходимо початковий індекс після "-"
@@ -553,6 +566,7 @@ listItem5.addEventListener('click', function() {
             } else {
                 suit3 = card;
             }
+            updateCards();
         });
   
         cardList.appendChild(cardItem);
@@ -592,8 +606,10 @@ listItem3Add.addEventListener('click', function() {
       
         // Додавання обробника події для вибору карти
         cardItem.addEventListener('click', function() {
+            dropdownMenu6.classList.toggle('hidden');
             card3 = card;
             listItem3Add.textContent = card;
+            updateCards();
             //Додавання карти
         });
 
