@@ -4,13 +4,13 @@
         background-color: #FFCF9D;
         border-radius: 10px;
         padding: 10px;
-        color: #000;
-        position: absolute;
-        left: calc(50% - 30vw);
         width: 60vw;
         text-align: center;
-        top: 20vw;
         font-size: min(3vw, 40px);
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
 
     

@@ -11,6 +11,7 @@
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
         "openai-php/client": "^0.5.2",
+        "openai-php/laravel": "^0.5.2",
         "orhanerday/open-ai": "^4.7",
         "vlucas/phpdotenv": "^5.5"
     },

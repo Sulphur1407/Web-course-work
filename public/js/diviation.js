@@ -31,6 +31,11 @@ function flipCard(card, cardImage, cardReverse) {
 }
 
 function getAnswer() {
+  if (textContainer.innerText){
+    // Якщо відповідь вже була, ще раз не генеруємо
+    сonsole.log("aboba")
+    return;
+  }
   if (selectedCard.length !== 3) {
     showError("Потрібно вибрати 3 карти");
     return;
@@ -42,7 +47,7 @@ function getAnswer() {
     return;
   }
 
-  showError("Не лякайтесь. Генерація відповіді може зайняти до 20 секунд");
+  showError("Генерація відповіді може зайняти до хвилини. Це залежить від завантаженості сервера");
   var textContainer = document.getElementById("answer-container");
   // Отримання токену CSRF з мета-тегу
   var csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');

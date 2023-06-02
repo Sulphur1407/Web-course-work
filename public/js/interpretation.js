@@ -42,6 +42,11 @@ function checkUniqueElements(arr) {
   }
 
 function getAnswer() {
+    if (textContainer.innerText){
+        // Якщо відповідь вже була, ще раз не генеруємо
+        return;
+      }
+      
     if (checkUndefinedWord(selectedCard)){
         showError("Спочатку заповніть всі карти");
         return;
@@ -58,7 +63,7 @@ function getAnswer() {
       return;
     } 
 
-    showError("Не лякайтесь. Генерація відповіді може зайняти до 20 секунд");
+    showError("Генерація відповіді може зайняти до хвилини. Це залежить від завантаженості сервера");
     var textContainer = document.getElementById("answer-container");
 
     // Отримання токену CSRF з мета-тегу
