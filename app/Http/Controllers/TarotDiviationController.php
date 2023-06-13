@@ -112,7 +112,7 @@ class TarotDiviationController extends Controller
         $input = $request->all();
         $selectedCards = $input["selectedCards"];
         $question = $input["questionText"];
-        $request = "Використовуй виключно українську мову. Дай повне тракнуваня розскдаду.";
+        $request = "Використовуй виключно українську мову. Дай повне тракнуваня розскдаду. Відповідь має бути повним, суцільним і цікавим тестом, обов'язково з висновком в кінці";
         if ($question) {
             $request = $request . "\nДай відповіть на питання: \"'$question'" . "\". Карти:";
         } else {
@@ -127,14 +127,14 @@ class TarotDiviationController extends Controller
                 $request = $request . " перевернута";
             }
         }
-        // Закоментовано, щоб для тестування не тратити гроші
+
         $open_ai_key = env("OPENAI_API_KEY");
         $open_ai = new OpenAi($open_ai_key);
 
         set_time_limit (300);
 
         $chat = $open_ai->chat([
-           //'model' => 'gpt-3.5-turbo',
+           //'model' => 'gpt-3.5-turbo', //Старіше версія мовної моделі. Працює повільніше
            'model' => 'gpt-3.5-turbo-0613',
            'messages' => [
                [
@@ -147,22 +147,10 @@ class TarotDiviationController extends Controller
            'frequency_penalty' => 0,
            'presence_penalty' => 0,
         ]);
+         
+        $answer = json_decode($chat);
+        $generatedText = ($answer->choices[0]->message->content);
         
-        
-        $d = json_decode($chat);
-        $generatedText = ($d->choices[0]->message->content);
-        
-        /*
-        $result = OpenAI::completions()->create([
-            'model' => 'text-davinci-003',
-            //'model' => 'gpt-3.5-turbo',
-            'prompt' => $request,
-            'max_tokens' => 1000,  // Збільшити кількість максимальних токенів
-            'temperature' => 0.4, // Зменшити температуру для збереження більшої унікальності
-        ]);
-        $generatedText = $result['choices'][0]['text'];
-        */
-        //$generatedText = $request;
         return response()->json(['text' => $generatedText]);
     }
 }

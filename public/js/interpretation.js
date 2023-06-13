@@ -59,7 +59,7 @@ function getAnswer() {
     } 
    
     const questionText = document.getElementById("question").value
-    if (questionText.length > 100) {
+    if (questionText.length > 200) {
       showError("Пробачте, але ваше питання задовге. Перефразуйте його, щоб зробити коротшим.");
       return;
     } 
