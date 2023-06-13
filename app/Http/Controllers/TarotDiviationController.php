@@ -134,7 +134,8 @@ class TarotDiviationController extends Controller
         set_time_limit (300);
 
         $chat = $open_ai->chat([
-           'model' => 'gpt-3.5-turbo',
+           //'model' => 'gpt-3.5-turbo',
+           'model' => 'gpt-3.5-turbo-0613',
            'messages' => [
                [
                    "role" => "user",
