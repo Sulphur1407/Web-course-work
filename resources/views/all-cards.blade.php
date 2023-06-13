@@ -26,7 +26,6 @@
             <img src="/storage/images/icons/menu 1.svg" alt="" class="menu-img">
         </button>
         <div id="myMenu">
-            <img src="/storage/images/icons/eye.svg" alt="" class="eye-menu">
             <a href="{{ url('/about-deck') }}" class="menu-element">
                 <img src="/storage/images/icons/menu1.svg" alt="">
                 <p>Про колоду Райдера-Уейта</p>

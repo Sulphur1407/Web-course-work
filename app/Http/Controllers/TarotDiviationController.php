@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Http;
 use Orhanerday\OpenAi\OpenAI;
+//use OpenAI\Laravel\Facades\OpenAI;
 
 
 class TarotDiviationController extends Controller
@@ -126,10 +127,12 @@ class TarotDiviationController extends Controller
                 $request = $request . " перевернута";
             }
         }
-        //* Закоментовано, щоб для тестування не тратити гроші
-        $open_ai_key = env("TOKEN");;
+        // Закоментовано, щоб для тестування не тратити гроші
+        $open_ai_key = env("OPENAI_API_KEY");
         $open_ai = new OpenAi($open_ai_key);
-        
+
+        set_time_limit (300);
+
         $chat = $open_ai->chat([
            'model' => 'gpt-3.5-turbo',
            'messages' => [
@@ -138,8 +141,8 @@ class TarotDiviationController extends Controller
                    "content" => $request
                ],
            ],
-           'temperature' => 1.0,
-           'max_tokens' => 1000,
+           'temperature' => 1,
+           'max_tokens' => 2000,
            'frequency_penalty' => 0,
            'presence_penalty' => 0,
         ]);
@@ -148,9 +151,17 @@ class TarotDiviationController extends Controller
         $d = json_decode($chat);
         $generatedText = ($d->choices[0]->message->content);
         
-        //*/$generatedText = $request;
-
-
+        /*
+        $result = OpenAI::completions()->create([
+            'model' => 'text-davinci-003',
+            //'model' => 'gpt-3.5-turbo',
+            'prompt' => $request,
+            'max_tokens' => 1000,  // Збільшити кількість максимальних токенів
+            'temperature' => 0.4, // Зменшити температуру для збереження більшої унікальності
+        ]);
+        $generatedText = $result['choices'][0]['text'];
+        */
+        //$generatedText = $request;
         return response()->json(['text' => $generatedText]);
     }
 }

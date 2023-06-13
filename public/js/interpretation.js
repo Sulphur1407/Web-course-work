@@ -42,11 +42,12 @@ function checkUniqueElements(arr) {
   }
 
 function getAnswer() {
+    var textContainer = document.getElementById("answer-container");
     if (textContainer.innerText){
         // Якщо відповідь вже була, ще раз не генеруємо
         return;
       }
-      
+
     if (checkUndefinedWord(selectedCard)){
         showError("Спочатку заповніть всі карти");
         return;
@@ -64,7 +65,7 @@ function getAnswer() {
     } 
 
     showError("Генерація відповіді може зайняти до хвилини. Це залежить від завантаженості сервера");
-    var textContainer = document.getElementById("answer-container");
+    
 
     // Отримання токену CSRF з мета-тегу
     var csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');

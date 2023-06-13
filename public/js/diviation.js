@@ -31,9 +31,9 @@ function flipCard(card, cardImage, cardReverse) {
 }
 
 function getAnswer() {
+  var textContainer = document.getElementById("answer-container");
   if (textContainer.innerText){
     // Якщо відповідь вже була, ще раз не генеруємо
-    сonsole.log("aboba")
     return;
   }
   if (selectedCard.length !== 3) {
@@ -48,7 +48,7 @@ function getAnswer() {
   }
 
   showError("Генерація відповіді може зайняти до хвилини. Це залежить від завантаженості сервера");
-  var textContainer = document.getElementById("answer-container");
+  
   // Отримання токену CSRF з мета-тегу
   var csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
   // Створюємо об'єкт XMLHttpRequest
